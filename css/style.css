@@ -1,0 +1,183 @@
+body {
+  background: indigo;
+}
+
+.container {
+  padding: 100px 0;
+}
+
+.row {
+  text-align: center;
+}
+
+.col-sm-12 {
+  text-align: center;
+}
+
+.square {
+  font-family: Walter Turncoat;
+  color: white;
+  height: 150px;
+  width: 150px;
+  background: seagreen;
+  box-sizing: border-box;
+  float: left;
+  border: 2px dashed white;
+  font-size: 90px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.highlight:hover {
+  transition: background 0.2s;
+  background: orange;
+}
+
+.fancy {
+  font-family: Walter Turncoat;
+}
+
+.arrow {
+  cursor: auto;
+}
+
+.choice {
+  font-size: 20px;
+  transition: font-size 0.4s, border 0.4s, margin 0.4s, width 0.4s;
+  position: relative;
+  padding: 18px 0px;
+  margin: 50px 20px;
+  user-select: none;
+  cursor: pointer;
+  height: 80px;
+  width: 150px;
+}
+
+.tipText {
+  opacity: 0;
+  transition: opacity 1.3s;
+  top: 125%;
+  left: 30%;
+  margin-left: -60px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: arial;
+  visibility: hidden;
+  width: 120px;
+  background: orange;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 4;
+}
+
+.tipText::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent orange transparent;
+}
+
+#chooseX:hover .tipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+#startTitle {
+  font-size: 55px;
+}
+
+#startModalBG {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: seagreen; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, seagreen, mediumseagreen); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, seagreen, mediumseagreen); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, seagreen, mediumseagreen); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, seagreen, mediumseagreen); /* Standard syntax */
+}
+
+#modalContent {
+  margin: 100px auto;
+  width: 600px;
+  height: 320px;
+  padding: 40px;
+  border: 3px dashed #FFF;
+  border-radius: 3%;
+  background: indigo;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#endWinner {
+  font-size: 50px;
+  padding: 14px 0;
+}
+
+#endModalBG {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 2;
+}
+
+#endModalContent {
+  margin: 100px auto;
+  width: 600px;
+  height:280px;
+  padding: 30px;
+  border: 1px solid #FFF;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#chooseX:hover, #chooseO:hover, #newGame:hover {
+  transition: font-size 0.4s, border 0.4s, margin 0.4s, width 0.4s;
+  font-size: 26px;
+  border: 2px dashed white;
+  border-radius: 6%;
+  margin: 50px 20px;
+  width: 200px;
+}
+
+#newGame:hover {
+  transition: background-color 0.4s, font-size 0.4s, border 0.4s, margin 0.4s, width 0.4s;
+  font-size: 26px;
+  border: 2px dashed white;
+  margin: 50px 20px;
+  width: 220px;
+  background-color: indigo;
+}
+
+
+
+#board {
+  position: fixed;
+  height: 450px;
+  width: 450px;
+  position: auto;
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
